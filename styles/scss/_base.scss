@@ -36,5 +36,5 @@ body {
     display: grid;
     width: 100%;
     grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
-    grid-template-columns: [sidebar-start] 6rem [sidebar-end content-start] 1fr [center-start] repeat(8, [column-start] minmax(min-content, 6rem) [column-end]) [center-end] 1fr [content-end];
+    grid-template-columns: [sidebar-start] 6rem [sidebar-end content-start] minmax(3rem, 1fr) [center-start] repeat(8, [column-start] minmax(min-content, 9rem) [column-end]) [center-end] minmax(3rem, 1fr) [content-end];
 }

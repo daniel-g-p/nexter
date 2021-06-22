@@ -1,9 +1,50 @@
 @use "./base" as *;
 .story {
     &__pictures {
-        background-color: color-primary;
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        background-image: linear-gradient(to right bottom, rgba($color-primary, 0.5), rgba($color-primary-dark, 0.5)), url("../../img/back.jpg");
+        background-size: cover;
+        background-position: center;
+        grid-column: content-start / column-end 4;
+        grid-row: 3 / 4;
+    }
+    &__image {
+        box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+        &--1 {
+            width: 100%;
+            grid-area: 2 / 2 / -2 / -2;
+            align-self: center;
+            box-shadow: 0 0 2rem rgba(0, 0, 0, 0.25);
+        }
+        &--2 {
+            width: 115%;
+            grid-area: 4 / 4 / -1 / -1;
+            box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+        }
     }
     &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
         background-color: $color-grey-light-1;
+        grid-column: column-start 5 / content-end;
+        grid-row: 3 / 4;
+        padding: 0 7.5vw;
+    }
+    &__subheading {
+        margin-bottom: 1rem;
+    }
+    &__heading {
+        margin-bottom: 2rem;
+        color: $color-grey-dark-1;
+    }
+    &__text {
+        margin-bottom: 2rem;
+        font-style: italic;
     }
 }

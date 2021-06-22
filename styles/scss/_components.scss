@@ -1,0 +1,19 @@
+@use "./base" as *;
+.button {
+    &:link,
+    &:visited {
+        padding: 1em 2em;
+        font-family: "Josefin Sans", sans-serif;
+        font-weight: 400;
+        text-decoration: none;
+        text-transform: uppercase;
+        background-color: $color-primary;
+        color: $color-grey-light-1;
+        cursor: pointer;
+        transition: background-color 0.25s ease;
+    }
+    &:focus,
+    &:hover {
+        background-color: $color-primary-dark;
+    }
+}

@@ -1,4 +1,6 @@
 @use "./base" as *;
 .footer {
     background-color: $color-secondary;
+    grid-column: content-start / content-end;
+    grid-row: -2 / -1;
 }

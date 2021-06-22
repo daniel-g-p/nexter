@@ -1,4 +1,26 @@
 @use "./base" as *;
 .features {
-    background-color: $color-grey-light-2;
+    grid-column: center-start / center-end;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, [column-start] minmax(16rem, 1fr) [column-end]);
+    gap: 3rem 3rem;
+    margin: 8rem 0;
+}
+
+.feature {
+    display: grid;
+    grid-template-columns: [icon-start] min-content [icon-end text-start] 1fr [text-end];
+    grid-template-rows: max-content 1fr;
+    gap: 0.5rem 1rem;
+    align-items: center;
+    &__icon {
+        grid-area: 1 / 1 / 2 / 2;
+        height: 2rem;
+        width: 2rem;
+    }
+    &__text {
+        grid-area: 2 / 2 / -1 / -1;
+        align-self: start;
+    }
 }

@@ -1,0 +1,27 @@
+@use "./base" as *;
+%heading {
+    font-weight: 400;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.heading-1 {
+    @extend %heading;
+}
+
+.heading-2 {
+    @extend %heading;
+    font-size: 2.5rem;
+    font-style: italic;
+}
+
+.heading-3 {
+    @extend %heading;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: $color-primary;
+}
+
+.heading-4 {
+    @extend %heading;
+    font-size: 1.25rem;
+}
