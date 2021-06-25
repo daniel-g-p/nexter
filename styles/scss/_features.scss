@@ -1,7 +1,7 @@
 @use "./base" as *;
 .features {
     grid-column: center-start / center-end;
-    grid-row: 2 / 3;
+    grid-row: features-start / features-end;
     display: grid;
     grid-template-columns: repeat(auto-fit, [column-start] minmax(16rem, 1fr) [column-end]);
     gap: 3rem 3rem;

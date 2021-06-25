@@ -2,5 +2,61 @@
 .realtors {
     background-color: $color-secondary;
     grid-column: column-start 7 / content-end;
-    grid-row: 1 / 2;
+    grid-row: header-start / header-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    @include media(800px) {
+        grid-column: content-start / content-end;
+        grid-row: realtors-start / realtors-end;
+        padding: 3rem 2rem;
+    }
+    &__heading {
+        margin-bottom: 1rem;
+    }
+    &__list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    &__realtor {
+        display: grid;
+        grid-template-columns: min-content max-content;
+        grid-template-rows: repeat(2, min-content);
+        margin: 1rem;
+    }
+    &__image {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+        border-radius: 50%;
+        width: 4.5rem;
+        height: 4.5rem;
+        overflow: hidden;
+        margin-right: 0.75rem;
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    &__name {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        align-self: end;
+        margin: 0.125rem 0;
+        color: $color-grey-light-1;
+    }
+    &__record {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        align-self: start;
+        margin: 0.125rem 0;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        color: $color-grey-light-2;
+    }
 }

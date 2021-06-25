@@ -1,8 +1,89 @@
 @use "./base" as *;
 .homes {
+    margin: 8rem 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(33, 1fr));
-    gap: 4rem 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    gap: 3rem 3rem;
     grid-column: center-start / center-end;
-    grid-row: 4 / 5;
+    grid-row: homes-start / homes-end;
+    @include media(800px) {
+        margin: 4.5rem 0;
+    }
+}
+
+.home {
+    position: relative;
+    display: grid;
+    grid-template-columns: [card-start] 2rem [content-start] repeat(2, [column-start] 1fr [column-end]) [content-end] 2rem [card-end];
+    grid-template-rows: 1fr repeat(2, min-content) 3rem;
+    background-color: $color-grey-light-1;
+    &__image {
+        width: 100%;
+        grid-row: 1 / 2;
+        grid-column: card-start / card-end;
+    }
+    &__heart {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 2rem;
+        height: 2rem;
+        fill: $color-primary;
+    }
+    &__title-box {
+        background-color: $color-secondary;
+        grid-row: 1 / 2;
+        grid-column: 2 / -2;
+        align-self: end;
+        transform: translateY(50%);
+        font-size: 1rem;
+        font-weight: 400;
+        font-family: "Josefin Sans", sans-serif;
+        color: $color-grey-light-1;
+        text-align: center;
+        height: 3em;
+        line-height: 3;
+    }
+    &__feature {
+        padding: 1rem 0;
+        align-self: center;
+        display: flex;
+        &--country {
+            padding-top: 3.5rem;
+            padding-left: 2rem;
+            grid-row: 2 / 3;
+            grid-column: card-start / column-end 1;
+            align-self: end;
+        }
+        &--rooms {
+            padding-top: 3.5rem;
+            grid-row: 2 / 3;
+            grid-column: column-start 2 / card-end;
+            align-self: end;
+        }
+        &--surface {
+            padding-bottom: 2rem;
+            padding-left: 2rem;
+            grid-row: 3 / 4;
+            grid-column: card-start / column-end 1;
+            align-self: start;
+        }
+        &--price {
+            padding-bottom: 2rem;
+            grid-row: 3 / 4;
+            grid-column: column-start 2 / card-end;
+            align-self: start;
+        }
+    }
+    &__icon {
+        fill: $color-primary;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 0.75rem;
+    }
+    &__button {
+        text-align: center;
+        grid-row: 4 / 5;
+        grid-column: card-start / card-end;
+    }
 }

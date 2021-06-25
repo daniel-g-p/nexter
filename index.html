@@ -12,9 +12,58 @@
 </head>
 
 <body class="container">
-    <nav class="sidebar">Sidebar</nav>
-    <header class="header">Header</header>
-    <aside class="realtors">Realtors</aside>
+    <nav class="sidebar">
+        <div class="menu">
+            <div class="menu__line menu__line--1"></div>
+            <div class="menu__line menu__line--2"></div>
+            <div class="menu__line menu__line--3"></div>
+        </div>
+    </nav>
+    <header class="header">
+        <img src="./img/logo.png" class="header__logo" alt="Nexter Logo">
+        <div class="hero">
+            <h3 class="heading-3 hero__subheading">Your own home</h3>
+            <h1 class="heading-1 hero__heading">The ultimate personal freedom</h1>
+            <a href="#" class="button hero__button">Find your own Home</a>
+        </div>
+        <div class="partners">
+            <div class="partners__heading">
+                As seen on
+            </div>
+            <div class="partners__logos">
+                <img src="img/logo-bbc.png" alt="BBC" class="partners__logo">
+                <img src="img/logo-forbes.png" alt="Forbes" class="partners__logo">
+                <img src="img/logo-techcrunch.png" alt="Techcrunch" class="partners__logo">
+                <img src="img/logo-bi.png" alt="Business Insider" class="partners__logo">
+            </div>
+        </div>
+    </header>
+    <aside class="realtors">
+        <h3 class="heading-3 realtors__heading">Top 3 Realtors</h3>
+        <div class="realtors__list">
+            <div class="realtors__realtor">
+                <div class="realtors__image">
+                    <img src="./img/realtor-1.jpeg" alt="Realtor 1">
+                </div>
+                <p class="realtors__name heading-4">Erik Feinman</p>
+                <p class="realtors__record">245 houses sold</p>
+            </div>
+            <div class="realtors__realtor">
+                <div class="realtors__image">
+                    <img src="./img/realtor-2.jpeg" alt="Realtor 2">
+                </div>
+                <p class="realtors__name heading-4">Kim Brown</p>
+                <p class="realtors__record">212 houses sold</p>
+            </div>
+            <div class="realtors__realtor">
+                <div class="realtors__image">
+                    <img src="./img/realtor-3.jpeg" alt="Realtor 3">
+                </div>
+                <p class="realtors__name heading-4">Toby Ramsey</p>
+                <p class="realtors__record">198 houses sold</p>
+            </div>
+        </div>
+    </aside>
     <section class="features">
         <div class="feature">
             <svg class="feature__icon">
@@ -59,86 +108,266 @@
             <p class="feature__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit excepturi corporis animi natus.</p>
         </div>
     </section>
-    <div class="story__pictures">
+    <section class="story__pictures">
         <img src="./img/story-1.jpeg" alt="Story Image 1" class="story__image--1">
         <img src="./img/story-2.jpeg" alt="Story Image 2" class="story__image--2">
-    </div>
-    <div class="story__content">
+    </section>
+    <section class="story__content">
         <h3 class="heading-3 story__subheading">Happy Customers</h3>
         <h2 class="heading-2 story__heading">&ldquo;The best decision of our lives.&rdquo;</h2>
         <p class="story__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum qui sint esse sequi voluptas. Suscipit tempore praesentium officiis sequi numqam.</p>
         <a href="#" class="button">Find your own Home</a>
-    </div>
+    </section>
     <section class="homes">
         <div class="home">
             <img src="./img/house-1.jpeg" alt="House 1" class="home__image">
+            <svg class="home__heart">
+                <use href="./img/sprite.svg#icon-heart"></use>
+            </svg>
             <div class="home__title-box">
-                <h5 class="heading-5 home__title">Beautiful Family House</h5>
+                <p class="home__title">Beautiful Family House</p>
             </div>
-            <p class="home__country">USA</p>
-            <p class="home__rooms">5 rooms</p>
-            <p class="home__surface">325m<sup>2</sup></p>
-            <p class="home__price">&#36;1,200,000</p>
-            <a href="#" class="button-home__button">Contact Realtor</a>
+            <div class="home__feature home__feature--country">
+                <svg class="home__icon">
+                    <use href="./img/sprite.svg#icon-location"></use>
+                </svg>
+                <p class="home__text">USA</p>
+            </div>
+            <div class="home__feature home__feature--rooms">
+                <svg class="home__icon">
+                    <use href="./img/sprite.svg#icon-person"></use>
+                </svg>
+                <p class="home__text">5 rooms</p>
+            </div>
+            <div class="home__feature home__feature--surface">
+                <svg class="home__icon">
+                    <use href="./img/sprite.svg#icon-expand"></use>
+                </svg>
+                <p class="home__text">325m<sup>2</sup></p>
+            </div>
+            <div class="home__feature home__feature--price">
+                <svg class="home__icon">
+                    <use href="./img/sprite.svg#icon-key"></use>
+                </svg>
+                <p class="home__text">&#36;1,200,000</p>
+            </div>
+            <a href="#" class="home__button button">Contact Realtor</a>
         </div>
         <div class="home">
             <img src="./img/house-2.jpeg" alt="House 2" class="home__image">
+            <svg class="home__heart">
+                <use href="./img/sprite.svg#icon-heart"></use>
+            </svg>
             <div class="home__title-box">
-                <h5 class="heading-5 home__title">Modern Glass Villa</h5>
+                <p class="home__title">Modern Glass Villa</p>
             </div>
-            <p class="home__country">Canada</p>
-            <p class="home__rooms">6 rooms</p>
-            <p class="home__surface">450m<sup>2</sup></p>
-            <p class="home__price">&#36;2,750,000</p>
-            <a href="#" class="button-home__button">Contact Realtor</a>
+            <div class="home__feature home__feature--country">
+                <svg class="home__icon">
+                    <use href="./img/sprite.svg#icon-location"></use>
+                </svg>
+                <p class="home__text">Canada</p>
+            </div>
+            <div class="home__feature home__feature--rooms">
+                <svg class="home__icon">
+                    <use href="./img/sprite.svg#icon-person"></use>
+                </svg>
+                <p class="home__text">6 rooms</p>
+            </div>
+            <div class="home__feature home__feature--surface">
+                <svg class="home__icon">
+                    <use href="./img/sprite.svg#icon-expand"></use>
+                </svg>
+                <p class="home__text">450m<sup>2</sup></p>
+            </div>
+            <div class="home__feature home__feature--price">
+                <svg class="home__icon">
+                    <use href="./img/sprite.svg#icon-key"></use>
+                </svg>
+                <p class="home__text">&#36;2,750,000</p>
+            </div>
+            <a href="#" class="home__button button">Contact Realtor</a>
         </div>
         <div class="home">
             <img src="./img/house-3.jpeg" alt="House 3" class="home__image">
+            <svg class="home__heart">
+                <use href="./img/sprite.svg#icon-heart"></use>
+            </svg>
             <div class="home__title-box">
-                <h5 class="heading-5 home__title">Cozy Country House</h5>
+                <p class="home__title">Cozy Country House</p>
             </div>
-            <p class="home__country">UK</p>
-            <p class="home__rooms">4 rooms</p>
-            <p class="home__surface">250m<sup>2</sup></p>
-            <p class="home__price">&#36;850,000</p>
-            <a href="#" class="button-home__button">Contact Realtor</a>
+            <div class="home__feature home__feature--country">
+                <svg class="home__icon">
+                    <use href="./img/sprite.svg#icon-location"></use>
+                </svg>
+                <p class="home__text">UK</p>
+            </div>
+            <div class="home__feature home__feature--rooms">
+                <svg class="home__icon">
+                    <use href="./img/sprite.svg#icon-person"></use>
+                </svg>
+                <p class="home__text">4 rooms</p>
+            </div>
+            <div class="home__feature home__feature--surface">
+                <svg class="home__icon">
+                    <use href="./img/sprite.svg#icon-expand"></use>
+                </svg>
+                <p class="home__text">250m<sup>2</sup></p>
+            </div>
+            <div class="home__feature home__feature--price">
+                <svg class="home__icon">
+                    <use href="./img/sprite.svg#icon-key"></use>
+                </svg>
+                <p class="home__text">&#36;850,000</p>
+            </div>
+            <a href="#" class="home__button button">Contact Realtor</a>
         </div>
         <div class="home">
             <img src="./img/house-4.jpeg" alt="House 4" class="home__image">
+            <svg class="home__heart">
+                <use href="./img/sprite.svg#icon-heart"></use>
+            </svg>
             <div class="home__title-box">
-                <h5 class="heading-5 home__title">Large Rustical Villa</h5>
+                <p class="home__title">Large Rustical Villa</p>
             </div>
-            <p class="home__country">Portugal</p>
-            <p class="home__rooms">6 rooms</p>
-            <p class="home__surface">480m<sup>2</sup></p>
-            <p class="home__price">&#36;1,950,000</p>
-            <a href="#" class="button-home__button">Contact Realtor</a>
+            <div class="home__feature home__feature--country">
+                <svg class="home__icon">
+                    <use href="./img/sprite.svg#icon-location"></use>
+                </svg>
+                <p class="home__text">Portugal</p>
+            </div>
+            <div class="home__feature home__feature--rooms">
+                <svg class="home__icon">
+                    <use href="./img/sprite.svg#icon-person"></use>
+                </svg>
+                <p class="home__text">6 rooms</p>
+            </div>
+            <div class="home__feature home__feature--surface">
+                <svg class="home__icon">
+                    <use href="./img/sprite.svg#icon-expand"></use>
+                </svg>
+                <p class="home__text">480m<sup>2</sup></p>
+            </div>
+            <div class="home__feature home__feature--price">
+                <svg class="home__icon">
+                    <use href="./img/sprite.svg#icon-key"></use>
+                </svg>
+                <p class="home__text">&#36;1,950,000</p>
+            </div>
+            <a href="#" class="home__button button">Contact Realtor</a>
         </div>
         <div class="home">
             <img src="./img/house-5.jpeg" alt="House 5" class="home__image">
+            <svg class="home__heart">
+                <use href="./img/sprite.svg#icon-heart"></use>
+            </svg>
             <div class="home__title-box">
-                <h5 class="heading-5 home__title">Majestic Palace House</h5>
+                <p class="home__title">Majestic Palace House</p>
             </div>
-            <p class="home__country">Germany</p>
-            <p class="home__rooms">18 rooms</p>
-            <p class="home__surface">4230m<sup>2</sup></p>
-            <p class="home__price">&#36;9,500,000</p>
-            <a href="#" class="button-home__button">Contact Realtor</a>
+            <div class="home__feature home__feature--country">
+                <svg class="home__icon">
+                    <use href="./img/sprite.svg#icon-location"></use>
+                </svg>
+                <p class="home__text">Germany</p>
+            </div>
+            <div class="home__feature home__feature--rooms">
+                <svg class="home__icon">
+                    <use href="./img/sprite.svg#icon-person"></use>
+                </svg>
+                <p class="home__text">18 rooms</p>
+            </div>
+            <div class="home__feature home__feature--surface">
+                <svg class="home__icon">
+                    <use href="./img/sprite.svg#icon-expand"></use>
+                </svg>
+                <p class="home__text">4230m<sup>2</sup></p>
+            </div>
+            <div class="home__feature home__feature--price">
+                <svg class="home__icon">
+                    <use href="./img/sprite.svg#icon-key"></use>
+                </svg>
+                <p class="home__text">&#36;9,500,000</p>
+            </div>
+            <a href="#" class="home__button button">Contact Realtor</a>
         </div>
         <div class="home">
             <img src="./img/house-6.jpeg" alt="House 6" class="home__image">
+            <svg class="home__heart">
+                <use href="./img/sprite.svg#icon-heart"></use>
+            </svg>
             <div class="home__title-box">
-                <h5 class="heading-5 home__title">Modern Family Apartment</h5>
+                <p class="home__title">Modern Family Apartment</p>
             </div>
-            <p class="home__country">Italy</p>
-            <p class="home__rooms">3 rooms</p>
-            <p class="home__surface">180m<sup>2</sup></p>
-            <p class="home__price">&#36;600,000</p>
-            <a href="#" class="button-home__button">Contact Realtor</a>
+            <div class="home__feature home__feature--country">
+                <svg class="home__icon">
+                    <use href="./img/sprite.svg#icon-location"></use>
+                </svg>
+                <p class="home__text">Italy</p>
+            </div>
+            <div class="home__feature home__feature--rooms">
+                <svg class="home__icon">
+                    <use href="./img/sprite.svg#icon-person"></use>
+                </svg>
+                <p class="home__text">3 rooms</p>
+            </div>
+            <div class="home__feature home__feature--surface">
+                <svg class="home__icon">
+                    <use href="./img/sprite.svg#icon-expand"></use>
+                </svg>
+                <p class="home__text">180m<sup>2</sup></p>
+            </div>
+            <div class="home__feature home__feature--price">
+                <svg class="home__icon">
+                    <use href="./img/sprite.svg#icon-key"></use>
+                </svg>
+                <p class="home__text">&#36;600,000</p>
+            </div>
+            <a href="#" class="home__button button">Contact Realtor</a>
         </div>
     </section>
-    <figure class="gallery">Gallery</figure>
-    <footer class="footer">Footer</footer>
+    <section class="gallery">
+        <figure class="gallery__container gallery__container--1"><img src="./img/gal-1.jpeg" alt="Gallery 1" class="gallery__image gallery__image--1">
+        </figure>
+        <figure class="gallery__container gallery__container--2"><img src="./img/gal-2.jpeg" alt="Gallery 2" class="gallery__image gallery__image--3">
+        </figure>
+        <figure class="gallery__container gallery__container--3"><img src="./img/gal-3.jpeg" alt="Gallery 3" class="gallery__image gallery__image--2">
+        </figure>
+        <figure class="gallery__container gallery__container--4"><img src="./img/gal-4.jpeg" alt="Gallery 4" class="gallery__image gallery__image--4">
+        </figure>
+        <figure class="gallery__container gallery__container--5"><img src="./img/gal-5.jpeg" alt="Gallery 5" class="gallery__image gallery__image--5">
+        </figure>
+        <figure class="gallery__container gallery__container--6"><img src="./img/gal-6.jpeg" alt="Gallery 6" class="gallery__image gallery__image--6">
+        </figure>
+        <figure class="gallery__container gallery__container--7"><img src="./img/gal-7.jpeg" alt="Gallery 7" class="gallery__image gallery__image--7">
+        </figure>
+        <figure class="gallery__container gallery__container--8"><img src="./img/gal-8.jpeg" alt="Gallery 8" class="gallery__image gallery__image--8">
+        </figure>
+        <figure class="gallery__container gallery__container--9"><img src="./img/gal-9.jpeg" alt="Gallery 9" class="gallery__image gallery__image--9">
+        </figure>
+        <figure class="gallery__container gallery__container--10"><img src="./img/gal-10.jpeg" alt="Gallery 10" class="gallery__image gallery__image--10">
+        </figure>
+        <figure class="gallery__container gallery__container--11"><img src="./img/gal-11.jpeg" alt="Gallery 11" class="gallery__image gallery__image--11">
+        </figure>
+        <figure class="gallery__container gallery__container--12"><img src="./img/gal-12.jpeg" alt="Gallery 12" class="gallery__image gallery__image--12">
+        </figure>
+        <figure class="gallery__container gallery__container--13"><img src="./img/gal-13.jpeg" alt="Gallery 13" class="gallery__image gallery__image--13">
+        </figure>
+        <figure class="gallery__container gallery__container--14"><img src="./img/gal-14.jpeg" alt="Gallery 14" class="gallery__image gallery__image--14">
+        </figure>
+    </section>
+    <footer class="footer">
+        <nav class="footer-nav">
+            <ul class="footer-nav__list">
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Find your dream home</a></li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Request proposal</a></li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Download home planner</a></li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Contact Us</a></li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Submit your property</a></li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Come work with us</a></li>
+            </ul>
+        </nav>
+        <p class="footer__text">&copy; Copyright 2017 by Jonas Schmedtmann. Feel free to use this project for your own purposes. This does NOT apply if you plan to produce your own course or tutorials based on this project.
+        </p>
+    </footer>
 </body>
 
 </html>

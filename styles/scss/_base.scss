@@ -11,6 +11,13 @@ $font-primary: 'Nunito',
 sans-serif;
 $font-display: 'Josefin Sans',
 sans-serif;
+// MIXINS
+@mixin media($screen) {
+    @media (max-width: $screen) {
+        @content;
+    }
+}
+
 // CSS RESET
 *,
 *::before,
@@ -23,6 +30,9 @@ sans-serif;
 html {
     font-size: 100%;
     box-sizing: border-box;
+    @include media(1080px) {
+        font-size: 75%;
+    }
 }
 
 body {
@@ -35,6 +45,10 @@ body {
 .container {
     display: grid;
     width: 100%;
-    grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+    grid-template-rows: [header-start] minmax(75vh, max-content) [header-end features-start] min-content [features-end story-start] minmax(40vw, max-content) [story-end homes-start] min-content [homes-end gallery-start] min-content [gallery-end footer-start] min-content [footer-end];
     grid-template-columns: [sidebar-start] 6rem [sidebar-end content-start] minmax(3rem, 1fr) [center-start] repeat(8, [column-start] minmax(min-content, 9rem) [column-end]) [center-end] minmax(3rem, 1fr) [content-end];
+    @include media(800px) {
+        grid-template-rows: 6rem [header-start] minmax(75vh, max-content) [header-end realtors-start] max-content [realtors-end features-start] min-content [features-end story1-start] max-content [story1-end story2-start] max-content [story2-end homes-start] min-content [homes-end gallery-start] min-content [gallery-end footer-start] min-content [footer-end];
+        grid-template-columns: [content-start] minmax(3rem, 1fr) [center-start] repeat(8, [column-start] minmax(min-content, 9rem) [column-end]) [center-end] minmax(3rem, 1fr) [content-end];
+    }
 }
